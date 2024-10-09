@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGUapp.RegisterPage"
+             Title="Register New Account">
+    <Grid>
+        <Grid VerticalOptions="Start" BackgroundColor="#003057" HeightRequest="80">
+            <Image VerticalOptions="Start" Source="banner.jpg" HorizontalOptions="FillAndExpand" Aspect="AspectFit"  
+                
+            HeightRequest="80"/>
+        </Grid>
+
+
+        <ScrollView Grid.Row="1" Margin="0,80,0,0" VerticalScrollBarVisibility="Always" >
+            <VerticalStackLayout x:Name="RegisterControl" Padding="20"  Spacing="15">
+
+                <Label Text="Register" FontSize="24" HorizontalOptions="Center"/>
+
+                <Entry x:Name="RegFullName" Placeholder="Full Name"/>
+                <Entry x:Name="RegUserName" Placeholder="User Name"/>
+                <Entry x:Name="RegEmail" Placeholder="Email" Keyboard="Email"/>
+                <Entry x:Name="RegPhoneNumber" Placeholder="Phone Number" Keyboard="Telephone"/>
+                <Entry x:Name="RegPassword" Placeholder="Password" IsPassword="True"/>
+                <Entry x:Name="RegConfirPassword" Placeholder="Confirm Password" IsPassword="True"/>
+
+                <Button Text="Register" 
+       Clicked="btnRegister_Clicked"
+       HorizontalOptions="Center"/>
+
+                <Label Text="Already have an account?" HorizontalOptions="Center"/>
+
+                <Button CornerRadius="5" TextColor="White" BackgroundColor="#003057" Text="Login"  Clicked="btnLogin_Clicked" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

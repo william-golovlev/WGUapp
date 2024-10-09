@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGUapp.LoginPage"
+             Title="Login">
+    <Grid>
+        <Grid VerticalOptions="Start" BackgroundColor="#003057" HeightRequest="80">
+            <Image VerticalOptions="Start" Source="banner.jpg" HorizontalOptions="FillAndExpand" Aspect="AspectFit"  
+                   
+               HeightRequest="80"/>
+        </Grid>
+
+
+        <ScrollView Grid.Row="1" Margin="0,80,0,0" VerticalScrollBarVisibility="Always" >
+
+            <VerticalStackLayout x:Name="LoginControl" Padding="20" Spacing="15">
+
+                <Label Text="Login" FontSize="24" HorizontalOptions="Center"/>
+
+                <Entry x:Name="login_email" Placeholder="Email/ User Name" />
+                <Entry x:Name="login_password" Placeholder="Password" IsPassword="True"/>
+
+                <Button CornerRadius="5" TextColor="White" BackgroundColor="#003057"  Text="Login"  x:Name="btnLogin" Clicked="btnLogin_Clicked"  HorizontalOptions="Center"/>
+
+                <Label Text="Don't have an account?" HorizontalOptions="Center"/>
+
+                <Button CornerRadius="5" TextColor="White" BackgroundColor="#003057"  Text="Register" x:Name="btnRegister" Clicked="btnRegister_Clicked" HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

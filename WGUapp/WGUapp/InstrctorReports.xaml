@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGUapp.InstrctorReports"
+             Title="Instructor Reports">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" 
+                     IconImageSource="logout_icon.png"
+                     Order="Primary" 
+                     Priority="0"
+                     Clicked="OnLogoutClicked"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid VerticalOptions="Start" BackgroundColor="#003057" HeightRequest="80">
+            <Image VerticalOptions="Start" Source="banner.jpg" HorizontalOptions="FillAndExpand" Aspect="AspectFit"  
+              
+          HeightRequest="80"/>
+        </Grid>
+
+
+        <ScrollView Grid.Row="1" Margin="0,80,0,0" VerticalScrollBarVisibility="Always" >
+
+            <StackLayout Margin="20" x:Name="CourseReportControl" >
+                <Label Text="Term Report" FontAttributes="Bold" FontSize="20"/>
+                <HorizontalStackLayout>
+                    <Entry x:Name="InstructorName" TextChanged="InstructorName_TextChanged" Placeholder="Instructor Name"/>
+
+
+                </HorizontalStackLayout>
+                <VerticalStackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="Instructor Name" FontAttributes="Bold"/>
+                        <Label Grid.Column="1"  Text="Instructor Phone"  FontAttributes="Bold"/>
+                        <Label Grid.Column="2"  Text="Instructor Email"  FontAttributes="Bold"/>
+                        <Label Grid.Column="3"  Text="Courses"  FontAttributes="Bold" />
+                    </Grid>
+                    <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
+                </VerticalStackLayout>
+                <CollectionView x:Name="InstructorCollectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <VerticalStackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0"   Text="{Binding instructorName}" />
+                                    <Label Grid.Column="1"   Text="{Binding instructorPhone}"/>
+                                    <Label Grid.Column="2"   Text="{Binding instructorEmail}"/>
+                                    <CollectionView Grid.Column="3"  ItemsSource="{Binding courses}">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Label  Text="{Binding courseName, StringFormat='○ {0}'}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+
+                                </Grid>
+                                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,5"/>
+                            </VerticalStackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

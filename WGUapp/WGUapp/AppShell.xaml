@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="WGUapp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WGUapp"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+    Title="Log In"
+    ContentTemplate="{DataTemplate local:LoginPage}"
+    Route="LoginPage" />
+    <!--<ShellContent-->
+    <!--Title="New Account Register"
+    ContentTemplate="{DataTemplate local:RegisterPage}"
+    Route="RegisterPage" />
+        <ShellContent
+        Title="All Terms"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <ShellContent
+        Title="All Courses"
+        ContentTemplate="{DataTemplate local:CourseView}"
+        Route="CourseView" />
+        <ShellContent
+     Title="All Courses"
+     ContentTemplate="{DataTemplate local:TermReport}"
+     Route="CourseView" />
+        <ShellContent
+     Title="All Courses"
+     ContentTemplate="{DataTemplate local:CourseReport}"
+     Route="CourseView" />
+        <ShellContent
+    Title="All Courses"
+    ContentTemplate="{DataTemplate local:InstrctorReports}"
+    Route="CourseView" /> -->
+
+</Shell>

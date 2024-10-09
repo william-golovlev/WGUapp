@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WGUapp.MainPage" Title="All Terms">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" 
+                     IconImageSource="logout_icon.png"
+                     Order="Primary" 
+                     Priority="0"
+                     Clicked="OnLogoutClicked"/>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid VerticalOptions="Start" BackgroundColor="#003057" HeightRequest="80">
+            <Image VerticalOptions="Start" Source="banner.jpg" HorizontalOptions="FillAndExpand" Aspect="AspectFit"  
+              
+          HeightRequest="80"/>
+        </Grid>
+
+
+        <ScrollView Grid.Row="1" Margin="0,80,0,0" VerticalScrollBarVisibility="Always" >
+            <Grid>
+                <VerticalStackLayout  x:Name="MainContent">
+                    <HorizontalStackLayout   Margin="8,20,8,10 " Spacing="8" HorizontalOptions="Center">
+                        <Button CornerRadius="5" FontSize="12" TextColor="White" Text="Term Reports" BackgroundColor="#003057" x:Name="btnTermReport" Clicked="btnTermReport_Clicked" HorizontalOptions="Center"/>
+                        <Button CornerRadius="5" FontSize="12" TextColor="White" Text="Course Reports" BackgroundColor="#003057" x:Name="btnCourseReport" Clicked="btnCourseReport_Clicked" HorizontalOptions="Center"/>
+                        <Button CornerRadius="5" FontSize="12" TextColor="White" Text="Instructor Reports" BackgroundColor="#003057" x:Name="btnInstructorReport" Clicked="btnInstructorReport_Clicked" HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <ScrollView HorizontalOptions="Center" Orientation="Horizontal">
+                        <HorizontalStackLayout x:Name="termStack" Spacing="15" Padding="20">
+                        </HorizontalStackLayout>
+                    </ScrollView>
+
+                    <HorizontalStackLayout Spacing="50" HorizontalOptions="Center">
+                        <Entry x:Name="termTitle" Text="Term Title" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="32" TextChanged="termTitleChange" TextColor="#404080"/>
+                    </HorizontalStackLayout>
+                    <!--<Border Stroke="Blue" StrokeThickness="2" Padding="5">
+                <HorizontalStackLayout HorizontalOptions="Center" BackgroundColor="{x:Static Color.FromRgb(0, 128, 255)}" Spacing="50">
+                    <VerticalStackLayout>
+                        <Label Text="Start Date:" HorizontalTextAlignment="Center"  FontSize="22"/>
+                        <DatePicker x:Name="
+            tart" DateSelected="termStart_DateSelected"></DatePicker>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="End Date:" HorizontalTextAlignment="Center"  FontSize="22"/>
+                        <DatePicker x:Name="termEnd" DateSelected="termEnd_DateSelected"></DatePicker>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>-->
+                    <Border Stroke="DarkBlue" StrokeThickness="2" Padding="5" BackgroundColor="#E6E6E6">
+                        <HorizontalStackLayout HorizontalOptions="Center" Spacing="50">
+                            <VerticalStackLayout>
+                                <Label Text="Start Date:" HorizontalTextAlignment="Center" FontSize="22"/>
+                                <DatePicker x:Name="termStart" DateSelected="termStart_DateSelected"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout>
+                                <Label Text="End Date:" HorizontalTextAlignment="Center" FontSize="22"/>
+                                <DatePicker x:Name="termEnd" DateSelected="termEnd_DateSelected"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Border>
+                    <VerticalStackLayout x:Name="courseStack"  Spacing="30" Padding="20">
+                        <!-- Changed to programatically create course buttons-->
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+
+
+
+            </Grid>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
