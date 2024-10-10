@@ -1,0 +1,10 @@
+MAINTENCE GUIDE:
+
+1. Upon first opening of this project, make sure to Clean, and then Rebuild the project. This is to ensure that all the unnecessary lint or temp files can be cleared, or else it will cause problems on different environments.
+
+2. Occasionally, files get locked in transit. Especially since this program was created in a secure environment, if any permission related issues occur, be sure to note down the file that is the culprit > go to properties > uncheck any locks for said file. 
+
+3. One note to make is that this app uses SQLite as the database. This means the data is stored on the device the application is run on. Maintainers may run this on a PC for debugging purposes, but this is because end users will be on mobile, and it is essential for offline caching. 
+
+4. MAUI and C# were used to create the program. Any technical details to be changed must be done in that tech stack. https://dotnet.microsoft.com/en-us/learn/maui
+

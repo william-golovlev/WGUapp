@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WGUapp",
+    "\\WGUapp\\WGUapp"
   ],
-  "SelectedNode": "\\test.txt",
+  "SelectedNode": "\\WGUapp\\WGUapp\\WGUapp.sln",
   "PreviewInSolutionExplorer": false
 }

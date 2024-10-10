@@ -1,0 +1,30 @@
+USER GUIDE
+
+Welcome to the instruction manual for the official WGU app! 
+
+=================================================================
+NEW FEATURES IN v1.1:
+
+1. All users are required to register in order to use the app. This is to ensure privacy and relevance to each student. This dedicated registration page is like a front door to a house, and is locked without a key. 
+
+2. Reports are now here! Users have access to: term reports, course reports, and instructor reports. One exciting feature is search functionality! The user is able to search within the report for a course or term, etc. Note: all reports are displayed in a table format. 
+
+===================================================================
+OTHER INFO:
+
+Now you are officially in the app! Welcome once again! Follow the guide below to understand how the app works once you have officially entered. 
+
+1. Reports are located at the top. Three buttons may be clicked on to display desired reports. 
+
+2. Terms are the row of buttons immediately below, named as "Term {X}". Terms may be added by clicking the left most button called "Add Term". This will automatically increment the number of terms by +1. If you wish to delete a term, YOU MUST MAKE SURE THERE ARE NO ACTIVE COURSES. Then, you may click the red "Delete Term" button below the "Add Course" button. 
+
+3. The header of each page is "Term {X}". Note, you may change the term name if you desire. You may also use the date picker to change the start and end date. This is not connected to WGU's calendar, but rather, it is to allow you to set goals and notify your mentor. 
+
+4. Courses are listed in tile shaped buttons. More can be added at the bottom when clicking the gray "Add Course" button. 
+
+5. Clicking a course button allows the user to edit the default values for a new course. This is useful keeping track of details. Each tile has different details to add: Instructor info, Notifications, Course Details, Assessments, and Course Notes. 
+
+6. On android, click the back button on the top left, or the bar at the bottom of your screen if your device provides. 
+
+7. You may logout whenever at the top right! Your information will be stored locally. 
+
